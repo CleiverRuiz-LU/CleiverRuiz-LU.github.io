@@ -1,219 +1,330 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CleiverRuiz-LU GitHub</title>
-    <!-- Font Awesome for Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <head>
+        <title>Cleiver Ivan Ruiz-Martinez</title>
+        <!-- The title of the webpage, displayed in the browser tab and used by search engines. -->
+        
+        <!-- Meta Information -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <!-- Specifies the character encoding for the HTML document. UTF-8 supports most characters across various languages. -->
+        
+        <meta name="author" content="Cleiver Ivan Ruiz-Martinez" />
+        <!-- Specifies the author of the webpage. Useful for documentation and SEO purposes. -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Ensures proper scaling of the website on mobile devices. 
+            'width=device-width' makes the site adjust to the device's width.
+            'initial-scale=1' sets the zoom level to 100%. -->
+        
+        <!-- Link to External Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <!-- Links an external CSS file for custom styles. Ensure that 'style.css' is in the correct directory. -->
+        
+        <!-- Canonical URL for SEO -->
+        <link rel="canonical" href="https://CleiverRuiz-LU.github.io/">
+        <!-- Specifies the canonical URL for the webpage to prevent duplicate content issues in SEO. -->
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet"> 
+        <!-- Imports the Merriweather font from Google Fonts. 
+            'wght@300;700' includes font weights for light (300) and bold (700) styles. -->
+            
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <!-- Imports the Lato font from Google Fonts. 
+            '400,700' specifies regular and bold weights. 
+            '400italic,700italic' includes italic styles for both weights. -->
+        
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Links the Font Awesome library for scalable vector icons (e.g., social media, contact icons).
+            Version 4.7.0 is referenced from a CDN (Content Delivery Network). -->
+    </head>
+
+
+    <script>
+        // Dropdown menu toggle function
+        // This function listens for a click event on any element with the class "dropbtn".
+        // When clicked, it toggles the "show" class on the element with the class "dropdown-content".
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+            // The "show" class is used to control the visibility of the dropdown menu.
+        });
+    
+        // Close the dropdown menu if the user clicks outside of it
+        // This function listens for any click event on the window.
+        window.onclick = function(event) {
+            // Check if the clicked element is NOT the dropdown button.
+            if (!event.target.matches('.dropbtn')) {
+                // Get all elements with the class "dropdown-content".
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+    
+                // Loop through all dropdown elements
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    // Check if the dropdown currently has the "show" class
+                    if (openDropdown.classList.contains('show')) {
+                        // Remove the "show" class to hide the dropdown
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    
+
     <style>
+        <style>
+        /* -------------------------- General Styling -------------------------- */
         body {
+            /* Sets the font for the entire page to Georgia, with serif as a fallback. */
+            font-family: 'Georgia', serif;
+            /* Removes default margin and padding for a cleaner layout. */
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-        }
-        header, footer {
-            background-color: #000000;
-            color: white;
-            padding: 20px 0;
-            text-align: left;
-            padding-left: 20px;
-        }
-        .hero {
-            background: url('Background_Image.png') no-repeat center center;
-            background-size: cover;
-            color: #000000; /* Black text for contrast on white background */
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 48px;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 20px;
-        }
-        .hero a {
-            color: white;
-            background-color: black;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-        .repositories, .contacts, .organizations {
-            padding: 50px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        h2 {
-            color: #000000; /* Black headers */
-            font-size: 30px;
-        }
-        .repository, .organization {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-        .repository h3, .organization h3 {
-            margin: 0;
-        }
-        .repository a, .organization a {
-            color: #000000; /* Black links */
-            text-decoration: none;
-        }
-        .repository p, .organization p {
-            font-size: 16px;
-            color: #555555;
-        }
-        .contacts ul {
-            list-style-type: none;
             padding: 0;
-            display: flex;
-            justify-content: space-around;
-            max-width: 400px;
-            margin: 0 auto;
+            /* Improves text readability by setting consistent line spacing. */
+            line-height: 1.6;
+            /* Default light mode background color: a soft light gray. */
+            background-color: #f4f4f4;
+            /* Default text color: dark gray for better readability on light backgrounds. */
+            color: #333;
+            /* Adds a smooth transition effect for background and text color changes. */
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        .contacts li {
+    
+        .container {
+            /* Sets a maximum width of 800px for the container to ensure readability. */
+            max-width: 800px;
+            /* Centers the container horizontally within the page. */
+            margin: auto;
+            /* Prevents any overflow content from affecting the layout. */
+            overflow: hidden;
+            /* Adds padding inside the container to create spacing around the content. */
+            padding: 20px;
+            /* Default background color for containers in light mode: white. */
+            background-color: #fff;
+            /* Rounds the corners of the container for a modern aesthetic. */
+            border-radius: 8px;
+            /* Adds a subtle shadow to create a sense of depth around the container. */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1, h2 {
+            /* Sets a slightly darker text color for headings to make them stand out. */
+            color: #444;
+        }
+    
+        ul {
+            /* Removes default bullet points from unordered lists. */
+            list-style: none;
+            /* Removes default padding from the unordered lists. */
+            padding: 0;
+        }
+    
+        ul li {
+            /* Adds spacing between list items for better readability. */
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
         }
-        .contacts li a {
+    
+        /* -------------------------- Floating Menu Styling -------------------------- */
+        .floating-menu {
+            /* Fixes the position of the menu to always appear in the bottom-left corner. */
+            position: fixed;
+            /* Sets the distance from the bottom and left edges of the viewport. */
+            bottom: 20px;
+            left: 20px;
+            /* Sets the background color of the floating menu to a soft blue. */
+            background-color: #7baadc;
+            /* Sets the text color of the menu items to white for better contrast. */
+            color: white;
+            /* Adds padding around the content inside the floating menu. */
+            padding: 10px;
+            /* Rounds the corners of the floating menu for a modern look. */
+            border-radius: 5px;
+            /* Ensures the floating menu appears above other elements on the page. */
+            z-index: 1000;
+        }
+    
+        /* -------------------------- Dark Mode Styling -------------------------- */
+        @media (prefers-color-scheme: dark) {
+            body {
+                /* Dark mode background color: a dark gray for reduced eye strain. */
+                background-color: #000000;
+                /* Text color: light gray for high contrast against the dark background. */
+                color: #f4f4f4;
+            }
+    
+            .container {
+                /* Dark mode container background color: a lighter shade of dark gray. */
+                background-color: #000000;
+                /* Adjusts the shadow in dark mode to make it appear softer. */
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            }
+    
+            h1, h2 {
+                /* Headings in dark mode are white for high contrast. */
+                color: #fff;
+            }
+    
+            a {
+                /* Link color in dark mode: a soft blue to stand out from the text. */
+                color: #7baadc;
+            }
+    
+            a:hover {
+                /* Link hover color in dark mode: a lighter blue to indicate interaction. */
+                color: #5a9bd8;
+            }
+    
+            .floating-menu {
+                /* Changes the floating menu background color to a darker shade of blue for dark mode. */
+                background-color: #5a7cad;
+                /* Keeps the text color white for contrast. */
+                color: white;
+            }
+        }
+    
+        /* -------------------------- Navigation Bar Styling -------------------------- */
+        .topnav a {
+            /* Aligns the navigation links to the right */
+            float: right;
+            /* Sets the default link color to gray */
+            color: gray;
+            /* Centers the text inside each link */
+            text-align: center;
+            /* Adds padding around each link for clickable space */
+            padding: 14px 16px;
+            /* Removes the default underline from links */
             text-decoration: none;
-            color: #000000;
-            font-size: 18px;
-            margin-left: 10px;
+            /* Sets the font size of the navigation links */
+            font-size: 17px;
         }
-        .contacts li i {
-            font-size: 24px;
-            color: #000000;
+    
+        .topnav a:hover {
+            /* Changes the background color when hovering over a link */
+            background-color: white;
+            /* Changes the text color when hovering over a link */
+            color: gray;
         }
-        footer p {
-            margin: 0;
+    
+        .topnav a.active {
+            /* Highlights the active page link with a white background */
+            background-color: white;
+            /* Sets the text color of the active link to black */
+            color: black;
+        }
+    
+        .topnav {
+            /* Sets the background color of the navigation bar to white */
+            background-color: white;
+            /* Ensures that content inside the navigation bar does not overflow */
+            overflow: hidden;
         }
     </style>
-</head>
-<body>
+    
 
-    <!-- Header -->
-    <header>
-        <h1>CleiverRuiz-LU GitHub</h1>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>CleiverRuiz-LU GitHub</h1>
-        <p>Explore my GitHub repositories and organizations.</p>
-        <a href="#repositories">Explore Repos</a>
-    </section>
-
-    <!-- Repositories Section -->
-    <section id="repositories" class="repositories">
-        <h2>My GitHub Repositories</h2>
-        <div id="repo-list">
-            <!-- Repositories will be loaded here by JavaScript -->
+    <body>
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Navigation Bar -->
+            <div class="topnav">
+                <nav>
+                    <!-- Links for navigation bar -->
+                    <!-- Clicking these links will scroll the page to the corresponding section -->
+                    <a href="#home" class="active">Home</a> <!-- Highlights the active page (Home) -->
+                    <a href="#publications">Publications</a> <!-- Link to the Publications section -->
+                    <a href="#github">GitHub</a> <!-- Link to the GitHub section -->
+                    <a href="#linkedin">LinkedIn</a> <!-- Link to the LinkedIn section -->
+                    <a href="#contact">Contact</a> <!-- Link to the Contact section -->
+                </nav>
+            </div>
+    
+            <!-- Introduction Section -->
+            <section id="home"> <!-- ID is used for in-page navigation -->
+                <h1>Cleiver Ivan Ruiz-Martinez</h1>
+                <p>
+                    <!-- Introduction paragraph providing a summary of your background -->
+                    I am an undergraduate student at Lipscomb University, pursuing a degree in Electrical 
+                    and Computer Engineering with a specialization in Robotics. I am advised by Prof. 
+                    Juan Rojas and have dedicated my academic journey to exploring cutting-edge topics 
+                    in robotics. My research focuses on robotic manipulation, design, and control, as well 
+                    as the integration of machine learning and artificial intelligence to enhance robotic systems.
+                </p>
+            </section>
+    
+            <!-- Profile Photo Section -->
+            <section>
+                <!-- Displays a profile photo with rounded corners -->
+                <img alt="Cleiver's Profile Photo" src="/images/HeadShot.png" 
+                    style="width:100%;max-width:100%;border-radius:8px;" />
+                <!-- Make sure the path to "HeadShot.png" is correct -->
+            </section>
+    
+            <!-- Education Section -->
+            <section>
+                <h2>Education</h2> <!-- Section heading -->
+                <hr /> <!-- Horizontal line for separation -->
+                <ul>
+                    <!-- List item for Lipscomb University -->
+                    <li>
+                        <strong>Lipscomb University</strong>  
+                        <br />
+                        B.S. in Electrical and Computer Engineering, Raymond B. Jones College of Engineering  
+                        <br />
+                        Expected Graduation: 2026 <!-- Graduation year -->
+                    </li>
+                    <!-- List item for High School -->
+                    <li>
+                        <strong>Martin Luther King Jr. Academic Magnet High School</strong>  
+                        <br />
+                        High School Diploma, 2020
+                    </li>
+                </ul>
+            </section>
+    
+            <!-- Skills Section -->
+            <section>
+                <h2>Skills</h2> <!-- Section heading -->
+                <hr /> <!-- Horizontal line for separation -->
+                <ul>
+                    <!-- Detailed description of your skills -->
+                    <li>
+                        Circuit Design, CAD, Linux, Programming (MATLAB, C++, Python), Robot Operating System (ROS)
+                    </li>     
+                </ul>
+            </section>
+    
+            <!-- Relevant Coursework Section -->
+            <!-- Uncomment this section if you want to display relevant coursework -->
+            <!--
+            <section>
+                <h2>Relevant Coursework</h2>
+                <hr />
+                <ul>
+                    <li>Signals and Systems</li>
+                    <li>Machine Learning</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Object-Oriented Programming</li>
+                </ul>
+            </section>
+            -->
+    
+            <!-- Awards Section -->
+            <section>
+                <h2>Awards</h2> <!-- Section heading -->
+                <hr /> <!-- Horizontal line for separation -->
+                <ul>
+                    <!-- List of awards -->
+                    <li>Equal Chance for Education Scholarship Recipient (2020)</li>
+                    <li>Nissan and College of Engineering Scholarship Awardee (2020)</li>
+                    <li>AFCCE's E. Noel Luddy Memorial Scholarship (2023)</li>
+                    <li>Schneider Electric Mentorship Program Participant (2023)</li>
+                </ul>
+            </section>
         </div>
-    </section>
+    </body>
+    
 
-    <!-- Organizations Section -->
-    <section id="organizations" class="organizations">
-        <h2>Organizations</h2>
-        <div id="org-list">
-            <!-- Organizations will be loaded here by JavaScript -->
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contacts">
-        <h2>Contacts</h2>
-        <ul>
-            <li>
-                <i class="fab fa-instagram"></i>
-                <a href="https://www.instagram.com/_cleiverr/" target="_blank">Instagram</a>
-            </li>
-            <li>
-                <i class="far fa-envelope"></i>
-                <a href="mailto:CIRuizMartinez@mail.lipscomb.edu">Email</a>
-            </li>
-            <li>
-                <i class="fab fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/cleiver-ruiz-martinez/" target="_blank">LinkedIn</a>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>All repositories and organizations associated with CleiverRuiz-LU GitHub</p>
-    </footer>
-
-    <!-- GitHub Repositories and Organizations JavaScript -->
-    <script>
-        const username = 'CleiverRuiz-LU'; // Your GitHub username
-        const repoList = document.getElementById('repo-list');
-        const orgList = document.getElementById('org-list');
-
-        // Fetch GitHub repositories
-        fetch(`https://api.github.com/users/${username}/repos`)
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(repo => {
-                    const repoDiv = document.createElement('div');
-                    repoDiv.classList.add('repository');
-
-                    const repoName = document.createElement('h3');
-                    const repoLink = document.createElement('a');
-                    repoLink.href = repo.html_url;
-                    repoLink.target = '_blank';
-                    repoLink.textContent = repo.name;
-                    repoName.appendChild(repoLink);
-
-                    const repoDescription = document.createElement('p');
-                    repoDescription.textContent = repo.description || 'No description provided.';
-
-                    repoDiv.appendChild(repoName);
-                    repoDiv.appendChild(repoDescription);
-
-                    repoList.appendChild(repoDiv);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching repositories:', error);
-                const errorMessage = document.createElement('p');
-                errorMessage.textContent = 'Failed to load repositories.';
-                repoList.appendChild(errorMessage);
-            });
-
-        // Fetch GitHub organization
-        const orgName = 'learningLogisticsLab';
-        fetch(`https://api.github.com/orgs/${orgName}`)
-            .then(response => response.json())
-            .then(data => {
-                const orgDiv = document.createElement('div');
-                orgDiv.classList.add('organization');
-
-                const orgName = document.createElement('h3');
-                const orgLink = document.createElement('a');
-                orgLink.href = data.html_url;
-                orgLink.target = '_blank';
-                orgLink.textContent = data.login;
-                orgName.appendChild(orgLink);
-
-                const orgDescription = document.createElement('p');
-                orgDescription.textContent = data.description || 'No description provided.';
-
-                orgDiv.appendChild(orgName);
-                orgDiv.appendChild(orgDescription);
-
-                orgList.appendChild(orgDiv);
-            })
-            .catch(error => {
-                console.error('Error fetching organization:', error);
-                const errorMessage = document.createElement('p');
-                errorMessage.textContent = 'Failed to load organization.';
-                orgList.appendChild(errorMessage);
-            });
-    </script>
-</body>
 </html>
