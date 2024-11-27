@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 
+    <!---------------------------- HEADER ---------------------------->
     <head>
         <title>Cleiver Ivan Ruiz-Martinez</title>
         <!-- The title of the webpage, displayed in the browser tab and used by search engines. -->
@@ -39,242 +40,80 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Links the Font Awesome library for scalable vector icons (e.g., social media, contact icons).
             Version 4.7.0 is referenced from a CDN (Content Delivery Network). -->
+       
+        <!-- Custom Page Style with Dark Mode -->
+        <link rel="stylesheet" href="styles.css">
     </head>
 
-
-    <script>
-        // Dropdown menu toggle function
-        // This function listens for a click event on any element with the class "dropbtn".
-        // When clicked, it toggles the "show" class on the element with the class "dropdown-content".
-        document.querySelector('.dropbtn').addEventListener('click', function() {
-            document.querySelector('.dropdown-content').classList.toggle('show');
-            // The "show" class is used to control the visibility of the dropdown menu.
-        });
-    
-        // Close the dropdown menu if the user clicks outside of it
-        // This function listens for any click event on the window.
-        window.onclick = function(event) {
-            // Check if the clicked element is NOT the dropdown button.
-            if (!event.target.matches('.dropbtn')) {
-                // Get all elements with the class "dropdown-content".
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-    
-                // Loop through all dropdown elements
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    // Check if the dropdown currently has the "show" class
-                    if (openDropdown.classList.contains('show')) {
-                        // Remove the "show" class to hide the dropdown
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-    
-
-    <style>
-        <style>
-        /* -------------------------- General Styling -------------------------- */
-        body {
-            /* Sets the font for the entire page to Georgia, with serif as a fallback. */
-            font-family: 'Georgia', serif;
-            /* Removes default margin and padding for a cleaner layout. */
-            margin: 0;
-            padding: 0;
-            /* Improves text readability by setting consistent line spacing. */
-            line-height: 1.6;
-            /* Default light mode background color: a soft light gray. */
-            background-color: #f4f4f4;
-            /* Default text color: dark gray for better readability on light backgrounds. */
-            color: #333;
-            /* Adds a smooth transition effect for background and text color changes. */
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-    
-        .container {
-            /* Sets a maximum width of 800px for the container to ensure readability. */
-            max-width: 800px;
-            /* Centers the container horizontally within the page. */
-            margin: auto;
-            /* Prevents any overflow content from affecting the layout. */
-            overflow: hidden;
-            /* Adds padding inside the container to create spacing around the content. */
-            padding: 20px;
-            /* Default background color for containers in light mode: white. */
-            background-color: #fff;
-            /* Rounds the corners of the container for a modern aesthetic. */
-            border-radius: 8px;
-            /* Adds a subtle shadow to create a sense of depth around the container. */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    
-        h1, h2 {
-            /* Sets a slightly darker text color for headings to make them stand out. */
-            color: #444;
-        }
-    
-        ul {
-            /* Removes default bullet points from unordered lists. */
-            list-style: none;
-            /* Removes default padding from the unordered lists. */
-            padding: 0;
-        }
-    
-        ul li {
-            /* Adds spacing between list items for better readability. */
-            margin-bottom: 10px;
-        }
-    
-        /* -------------------------- Floating Menu Styling -------------------------- */
-        .floating-menu {
-            /* Fixes the position of the menu to always appear in the bottom-left corner. */
-            position: fixed;
-            /* Sets the distance from the bottom and left edges of the viewport. */
-            bottom: 20px;
-            left: 20px;
-            /* Sets the background color of the floating menu to a soft blue. */
-            background-color: #7baadc;
-            /* Sets the text color of the menu items to white for better contrast. */
-            color: white;
-            /* Adds padding around the content inside the floating menu. */
-            padding: 10px;
-            /* Rounds the corners of the floating menu for a modern look. */
-            border-radius: 5px;
-            /* Ensures the floating menu appears above other elements on the page. */
-            z-index: 1000;
-        }
-    
-        /* -------------------------- Dark Mode Styling -------------------------- */
-        @media (prefers-color-scheme: dark) {
-            body {
-                /* Dark mode background color: a dark gray for reduced eye strain. */
-                background-color: #000000;
-                /* Text color: light gray for high contrast against the dark background. */
-                color: #f4f4f4;
-            }
-    
-            .container {
-                /* Dark mode container background color: a lighter shade of dark gray. */
-                background-color: #000000;
-                /* Adjusts the shadow in dark mode to make it appear softer. */
-                box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-            }
-    
-            h1, h2 {
-                /* Headings in dark mode are white for high contrast. */
-                color: #fff;
-            }
-    
-            a {
-                /* Link color in dark mode: a soft blue to stand out from the text. */
-                color: #7baadc;
-            }
-    
-            a:hover {
-                /* Link hover color in dark mode: a lighter blue to indicate interaction. */
-                color: #5a9bd8;
-            }
-    
-            .floating-menu {
-                /* Changes the floating menu background color to a darker shade of blue for dark mode. */
-                background-color: #5a7cad;
-                /* Keeps the text color white for contrast. */
-                color: white;
-            }
-        }
-    
-        /* -------------------------- Navigation Bar Styling -------------------------- */
-        .topnav a {
-            /* Aligns the navigation links to the right */
-            float: right;
-            /* Sets the default link color to gray */
-            color: gray;
-            /* Centers the text inside each link */
-            text-align: center;
-            /* Adds padding around each link for clickable space */
-            padding: 14px 16px;
-            /* Removes the default underline from links */
-            text-decoration: none;
-            /* Sets the font size of the navigation links */
-            font-size: 17px;
-        }
-    
-        .topnav a:hover {
-            /* Changes the background color when hovering over a link */
-            background-color: white;
-            /* Changes the text color when hovering over a link */
-            color: gray;
-        }
-    
-        .topnav a.active {
-            /* Highlights the active page link with a white background */
-            background-color: white;
-            /* Sets the text color of the active link to black */
-            color: black;
-        }
-    
-        .topnav {
-            /* Sets the background color of the navigation bar to white */
-            background-color: white;
-            /* Ensures that content inside the navigation bar does not overflow */
-            overflow: hidden;
-        }
-    </style>
-    
-
-
+    <!---------------------------- BODY ---------------------------->
     <body>
         <!-- Main Container -->
         <div class="container">
             <!-- Navigation Bar -->
             <div class="topnav">
+                <!-- Navigation Links -->
                 <nav>
-                    <!-- Links for navigation bar -->
-                    <!-- Clicking these links will scroll the page to the corresponding section -->
-                    <a href="#home" class="active">Home</a> <!-- Highlights the active page (Home) -->
-                    <a href="#publications">Publications</a> <!-- Link to the Publications section -->
-                    <a href="#github">GitHub</a> <!-- Link to the GitHub section -->
-                    <a href="#linkedin">LinkedIn</a> <!-- Link to the LinkedIn section -->
-                    <a href="#contact">Contact</a> <!-- Link to the Contact section -->
+                    <a href="index.html" class="active">Home</a>
+                    <a href="pages/publications.html">Publications</a>
+                    <a href="pages/projects.html">Projects</a>
+                    <a href="pages/contact.html">Contact</a>
                 </nav>
             </div>
-    
-            <!-- Introduction Section -->
-            <section id="home"> <!-- ID is used for in-page navigation -->
-                <h1>Cleiver Ivan Ruiz-Martinez</h1>
-                <p>
-                    <!-- Introduction paragraph providing a summary of your background -->
-                    I am an undergraduate student at Lipscomb University, pursuing a degree in Electrical 
-                    and Computer Engineering with a specialization in Robotics. I am advised by Prof. 
-                    Juan Rojas and have dedicated my academic journey to exploring cutting-edge topics 
-                    in robotics. My research focuses on robotic manipulation, design, and control, as well 
-                    as the integration of machine learning and artificial intelligence to enhance robotic systems.
-                </p>
+        
+            <!-- Bio Section -->
+            <section id="bio">
+                <h2>Bio</h2>
+                <hr />
+                <div class="bio-section">
+                    <!-- Bio Text -->
+                    <div class="bio-text">
+                        <p>
+                            I am an undergraduate student at Lipscomb University, pursuing a degree in Electrical 
+                            and Computer Engineering with a specialization in Robotics. I am advised by 
+                            <a href="https://www.lipscomb.edu/directory/rojas-suarez-del-real-juan" target="_blank" title="View Juan Rojas Suarez del Real's profile" style="text-decoration: none; color: #0077b5;">
+                                Prof. Juan Rojas Suarez del Real
+                            </a> 
+                            and have dedicated my academic journey to exploring cutting-edge topics 
+                            in robotics. My research focuses on robotic manipulation, design, and control, as well 
+                            as the integration of machine learning and artificial intelligence to enhance robotic systems.
+                        </p>
+                    </div>
+                    <!-- Bio Image -->
+                    <div>
+                        <img src="/images/HeadShot.png" alt="Cleiver's Profile Photo" class="bio-image">
+                        <!-- CV Button -->
+                        <div style="text-align: center; margin-top: 15px;">
+                            <!-- CV Button with Icon -->
+                            <a href="/images/Engineering_Reume_CleiverRuiz_2024.pdf" target="_blank" class="cv-button" style="
+                            display: inline-block;
+                            text-decoration: none;
+                            color: white;
+                            background-color: #0077b5;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            font-weight: bold;
+                            transition: background-color 0.3s ease;">
+                            <i class="fa fa-file" style="margin-right: 8px;"></i>  CSV
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
-    
-            <!-- Profile Photo Section -->
-            <section>
-                <!-- Displays a profile photo with rounded corners -->
-                <img alt="Cleiver's Profile Photo" src="/images/HeadShot.png" 
-                    style="width:100%;max-width:100%;border-radius:8px;" />
-                <!-- Make sure the path to "HeadShot.png" is correct -->
-            </section>
-    
+
+        
             <!-- Education Section -->
-            <section>
-                <h2>Education</h2> <!-- Section heading -->
-                <hr /> <!-- Horizontal line for separation -->
+            <section id="education">
+                <h2>Education</h2>
+                <hr />
                 <ul>
-                    <!-- List item for Lipscomb University -->
                     <li>
                         <strong>Lipscomb University</strong>  
                         <br />
-                        B.S. in Electrical and Computer Engineering, Raymond B. Jones College of Engineering  
+                        B.S. in Electrical and Computer Engineering
                         <br />
-                        Expected Graduation: 2026 <!-- Graduation year -->
+                        Expected Graduation: 2026
                     </li>
-                    <!-- List item for High School -->
                     <li>
                         <strong>Martin Luther King Jr. Academic Magnet High School</strong>  
                         <br />
@@ -282,40 +121,23 @@
                     </li>
                 </ul>
             </section>
-    
+        
             <!-- Skills Section -->
-            <section>
-                <h2>Skills</h2> <!-- Section heading -->
-                <hr /> <!-- Horizontal line for separation -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <hr />
                 <ul>
-                    <!-- Detailed description of your skills -->
                     <li>
                         Circuit Design, CAD, Linux, Programming (MATLAB, C++, Python), Robot Operating System (ROS)
                     </li>     
                 </ul>
             </section>
-    
-            <!-- Relevant Coursework Section -->
-            <!-- Uncomment this section if you want to display relevant coursework -->
-            <!--
-            <section>
-                <h2>Relevant Coursework</h2>
+        
+            <!-- Awards Section -->
+            <section id="awards">
+                <h2>Awards</h2>
                 <hr />
                 <ul>
-                    <li>Signals and Systems</li>
-                    <li>Machine Learning</li>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Object-Oriented Programming</li>
-                </ul>
-            </section>
-            -->
-    
-            <!-- Awards Section -->
-            <section>
-                <h2>Awards</h2> <!-- Section heading -->
-                <hr /> <!-- Horizontal line for separation -->
-                <ul>
-                    <!-- List of awards -->
                     <li>Equal Chance for Education Scholarship Recipient (2020)</li>
                     <li>Nissan and College of Engineering Scholarship Awardee (2020)</li>
                     <li>AFCCE's E. Noel Luddy Memorial Scholarship (2023)</li>
@@ -324,7 +146,5 @@
             </section>
         </div>
     </body>
-    
-
 
 </html>

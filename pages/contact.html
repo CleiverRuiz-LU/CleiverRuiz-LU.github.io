@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+    <!---------------------------- HEADER ---------------------------->
+    <head>
+        <title>Contact - Cleiver Ivan Ruiz-Martinez</title>
+        <!-- The title of the webpage, displayed in the browser tab and used by search engines. -->
+
+        <!-- Meta Information -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="author" content="Cleiver Ivan Ruiz-Martinez" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Link to External Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+
+        <!-- Canonical URL for SEO -->
+        <link rel="canonical" href="https://CleiverRuiz-LU.github.io/">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Custom Page Style with Dark Mode -->
+        <link rel="stylesheet" href="../styles.css">
+        <style>
+            /* Container for the image and social links section */
+            .contact-row {
+                display: flex; /* Flexbox layout for side-by-side arrangement */
+                align-items: center; /* Vertically align content */
+                justify-content: space-between; /* Add space between the image and buttons */
+                flex-wrap: wrap; /* Allow wrapping for smaller screens */
+                gap: 20px; /* Add spacing between items */
+            }
+
+            /* Styling for the image */
+            .profile-image {
+                width: 200px; /* Set a fixed width for the image */
+                height: auto; /* Maintain the aspect ratio */
+                border-radius: 10px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+            }
+        </style>
+    </head>
+
+    <!---------------------------- BODY ---------------------------->
+    <body>
+        <!------------------ Main Container ------------------>
+        <div class="container">
+            <!------------------ Navigation Bar ------------------>
+            <div class="topnav">
+                <nav>
+                    <a href="../index.html">Home</a>
+                    <a href="publications.html">Publications</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </nav>
+            </div>
+
+            <!------------------ Contact Page Content ------------------>
+            <section>
+                <!-- Main heading for the Contact Page -->
+                <h1>Contact Me</h1>
+                <p>
+                    <!-- Brief description encouraging users to reach out -->
+                    Feel free to reach out to me through email or connect with me on my social media platforms!
+                </p>
+
+                <!------------------ Row for Image and Buttons ------------------>
+                <div class="contact-row">
+                    <!-- Profile Image Section -->
+                    <img src="../images/Contact_ME_image.png" alt="Profile Photo" style="width:500px; height:auto;">
+                    <!-- Displays a profile photo 
+                        - 'src' specifies the image file location relative to this page.
+                        - 'alt' provides alternative text for accessibility and in case the image fails to load.
+                        - 'style' sets the width to 500px and adjusts the height automatically to maintain the aspect ratio. -->
+
+                    <!-- Social Media Links Section -->
+                    <div class="social-links">
+                        <!-- Email Button -->
+                        <a href="mailto:CIRuizMartinez@mail.lipscomb.edu" class="button email">
+                            <i class="fa fa-envelope"></i> Email
+                            <!-- Font Awesome icon 'fa-envelope' is used for email -->
+                        </a>
+                        
+                        <!-- LinkedIn Button -->
+                        <a href="https://www.linkedin.com/in/cleiver-ruiz-martinez/" target="_blank" class="button linkedin">
+                            <i class="fa fa-linkedin"></i> LinkedIn
+                            <!-- Font Awesome icon 'fa-linkedin' for LinkedIn -->
+                            <!-- 'target="_blank"' opens the link in a new tab -->
+                        </a>
+                        
+                        <!-- Facebook Button -->
+                        <a href="https://www.facebook.com/your-profile/" target="_blank" class="button facebook">
+                            <i class="fa fa-facebook"></i> Facebook
+                            <!-- Font Awesome icon 'fa-facebook' for Facebook -->
+                        </a>
+                        
+                        <!-- Instagram Button -->
+                        <a href="https://www.instagram.com/_cleiverr/" target="_blank" class="button instagram">
+                            <i class="fa fa-instagram"></i> Instagram
+                            <!-- Font Awesome icon 'fa-instagram' for Instagram -->
+                        </a>
+                        
+                        <!-- ORCID Button -->
+                        <a href="https://orcid.org/0009-0000-8691-6711" target="_blank" class="button orcid">
+                            <img src="https://orcid.org/sites/default/files/images/orcid_24x24.png" alt="ORCID Logo" />
+                            ORCID
+                            <!-- Includes a small ORCID logo next to the button text. 
+                                - 'src' points to the ORCID logo hosted online.
+                                - 'alt' provides descriptive text for accessibility. -->
+                        </a>
+                        
+                        <!-- GitHub Button -->
+                        <a href="https://github.com/CleiverRuiz-LU" target="_blank" class="button github">
+                            <i class="fa fa-github"></i> GitHub
+                            <!-- Font Awesome icon 'fa-github' for GitHub -->
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </body>
+</html>
+

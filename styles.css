@@ -1,0 +1,330 @@
+/* -------------------------- General Styling -------------------------- */
+
+/* Applies global font, background color, and smooth transitions */
+body {
+    font-family: 'Georgia', serif; /* Default font family */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    line-height: 1.6; /* Improve text readability */
+    background-color: #f4f4f4; /* Light gray background for light mode */
+    color: #333; /* Default dark gray text */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark/light mode */
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px; /* Restrict maximum width for better readability */
+    margin: auto; /* Center container horizontally */
+    overflow: hidden; /* Prevent content overflow */
+    padding: 20px; /* Add spacing inside the container */
+    background-color: #fff; /* White background in light mode */
+    border-radius: 8px; /* Slightly round the corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Headings Styling */
+h1, h2 {
+    color: #444; /* Slightly darker gray for headings */
+}
+
+/* Unordered List Styling */
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+ul li {
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+/* -------------------------- Bio Section -------------------------- */
+
+/* Styling for the biography section with image and text */
+.bio-section {
+    display: flex; /* Align items side-by-side */
+    align-items: center; /* Vertically align content */
+    gap: 20px; /* Space between text and image */
+    flex-wrap: wrap; /* Ensure proper layout on smaller screens */
+}
+
+.bio-text {
+    flex: 2; /* Allocate more space to the text */
+}
+
+.bio-image {
+    flex: 1; /* Allocate less space to the image */
+    max-width: 200px; /* Restrict the maximum width of the image */
+    border-radius: 8px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.bio-text a {
+    text-decoration: none; /* Remove underline */
+    color: #0077b5; /* Lipscomb's blue color for links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.bio-text a:hover {
+    color: #0056a3; /* Darker blue on hover for better visual feedback */
+}
+
+/* -------------------------- Project Section -------------------------- */
+
+#projects {
+    margin-top: 40px;
+}
+
+.project-category {
+    margin-bottom: 40px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between projects */
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #f9f9f9; /* Light mode card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05); /* Slight hover zoom */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.project-details h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center;
+    color: #333; /* Light mode text color */
+}
+
+.project-details p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #555; /* Slightly darker description text */
+}
+
+.project-link {
+    text-decoration: none;
+    color: white;
+    background-color: #0077b5; /* LinkedIn blue for buttons */
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #005a90; /* Darker blue on hover */
+}
+
+
+
+/* -------------------------- Section Styling -------------------------- */
+
+/* Add spacing and separation between sections */
+section {
+    margin-bottom: 40px; /* Space below each section */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc; /* Subtle horizontal divider */
+}
+
+/* -------------------------- Navigation Bar Styling -------------------------- */
+
+/* General styling for the navigation bar */
+.topnav {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between links and icon */
+    align-items: center; /* Vertically align items */
+    background-color: #333; /* Dark gray background for navigation */
+    padding: 10px 20px; /* Add padding for spacing */
+}
+
+.topnav nav {
+    display: flex; /* Flexbox layout for links */
+    gap: 15px; /* Spacing between navigation links */
+}
+
+/* Styling for navigation links */
+.topnav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Add clickable padding */
+    border-radius: 5px; /* Slightly round edges */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+.topnav a:hover {
+    background-color: #575757; /* Light gray background on hover */
+}
+
+/* Active link styling */
+.topnav a.active {
+    background-color: #b2b2b2; /* Light gray to indicate active page */
+}
+
+/* Profile icon styling */
+.topnav .icon {
+    display: flex; /* Flexbox layout for the icon */
+    align-items: center; /* Vertically align icon */
+    text-decoration: none; /* Remove underline from link */
+    padding: 5px; /* Add padding around the icon */
+}
+
+.topnav .icon-img {
+    width: 40px; /* Icon width */
+    height: 40px; /* Icon height */
+    border-radius: 50%; /* Circular icon */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for profile icon */
+.topnav .icon-img:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* -------------------------- Social Media Buttons -------------------------- */
+
+/* Social media container styling */
+.social-links {
+    display: flex; /* Flexbox layout for alignment */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px; /* Space above the buttons */
+    max-width: 400px; /* Restrict maximum width */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Styling for individual buttons */
+.social-links .button {
+    display: flex; /* Align icon and text */
+    align-items: center; /* Center icon and text vertically */
+    justify-content: center; /* Center content */
+    padding: 12px 20px; /* Add spacing inside button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 8px; /* Rounded edges */
+    font-size: 18px; /* Larger font for readability */
+    font-weight: bold; /* Bold text */
+    color: white; /* White text color */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    width: 100%; /* Full-width buttons */
+    max-width: 400px; /* Restrict button width */
+    margin: auto; /* Center buttons */
+    gap: 10px; /* Space between icon and text */
+}
+
+/* Specific button styling for each platform */
+.social-links .email {
+    background-color: #d14836; /* Gmail red */
+}
+
+.social-links .linkedin {
+    background-color: #0077b5; /* LinkedIn blue */
+}
+
+.social-links .facebook {
+    background-color: #3b5998; /* Facebook blue */
+}
+
+.social-links .instagram {
+    background-color: #e4405f; /* Instagram pink */
+}
+
+.social-links .orcid {
+    background-color: #a6ce39; /* ORCID green */
+}
+
+.social-links .github {
+    background-color: #333; /* GitHub black */
+}
+
+/* Hover effects for all buttons */
+.social-links .button:hover {
+    opacity: 0.8; /* Dim the button slightly on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* -------------------------- Floating Menu -------------------------- */
+
+/* Styling for floating menu at bottom-left */
+.floating-menu {
+    position: fixed; /* Fix position in the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+    background-color: #7baadc; /* Soft blue background */
+    color: white; /* White text */
+    padding: 10px; /* Add spacing inside the menu */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears on top of other elements */
+}
+
+/* -------------------------- Dark Mode Styling -------------------------- */
+
+@media (prefers-color-scheme: dark) {
+    /* General Styling */
+    body {
+        background-color: #121212; /* Dark mode background */
+        color: #e0e0e0; /* Light gray text for contrast */
+    }
+
+    .container {
+        background-color: #000000; /* Darker gray for container */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    h1, h2, .project-details h4 {
+        color: #fff; /* Yellow for headings in dark mode */
+    }
+
+    a {
+        color: #7baadc; /* Light blue for links */
+    }
+
+    a:hover {
+        color: #5a9bd8; /* Brighter blue on hover */
+    }
+
+    /* Projects Section */
+    .project-item {
+        background-color: #1a1a1a; /* Dark card background */
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+    }
+
+    .project-item:hover {
+        box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    }
+
+    .project-details p {
+        color: #cccccc; /* Light gray for descriptions */
+    }
+
+    .project-link {
+        background-color: #444; /* Gray button for dark mode */
+    }
+
+    .project-link:hover {
+        background-color: #555; /* Lighter gray on hover */
+    }
+}

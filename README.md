@@ -60,7 +60,7 @@ Before pushing your code to GitHub, install the following extensions in VSCode:
 1. Open the Command Palette in VSCode (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
 2. Run the following command:
     ```bash
-     > Live Preview: Start Server Logging
+     > Live Preview: Start Server
      ```
 3. Your webpage will open in a built-in VSCode browser.
 
