@@ -12,7 +12,7 @@ sections:
   - block: collection
     content:
       title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      text: I work on a wide range of projects, from educational resources to robotics projects and AI initiatives. I manage different projects to expand my skills. If you are interested in viewing the projects I have worked on, take a look at the projects section.
       filters:
         folders:
           - project
@@ -20,4 +20,5 @@ sections:
       view: article-grid
       fill_image: false
       columns: 3
+
 ---

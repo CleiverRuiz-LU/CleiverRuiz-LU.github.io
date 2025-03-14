@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Public-Speaking | Cleiver Ruiz-Martinez</title>
+    <link>http://localhost:1313/tags/public-speaking/</link>
+      <atom:link href="http://localhost:1313/tags/public-speaking/index.xml" rel="self" type="application/rss+xml" />
+    <description>Public-Speaking</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 23 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_645fa481986063ef.png</url>
+      <title>Public-Speaking</title>
+      <link>http://localhost:1313/tags/public-speaking/</link>
+    </image>
+    
+    <item>
+      <title>Tennessee Campus Civic Summit 2024</title>
+      <link>http://localhost:1313/post/tcdn/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/tcdn/</guid>
+      <description>&lt;p&gt;I was invited to share my experiences with TIRRC VOTES over the 2023 Summer Break. It was my first instance of being able to talk in a public setting where my experiences in engaging with my community made me a leader. As an undocumented student, civic engagement through door knocking, connecting with organizations, and building a network of resources helps us support our families and future generations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Group photo of summit participants&#34; srcset=&#34;
+               /media/TCDN_2024_image4_hu_89a98f0e23b3d6f.webp 400w,
+               /media/TCDN_2024_image4_hu_fac661860958ecf1.webp 760w,
+               /media/TCDN_2024_image4_hu_6653e3fc05536be.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/TCDN_2024_image4_hu_89a98f0e23b3d6f.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;507&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;At the conclusion of the Tennessee Campus Civic Summit, dozens of college students from across the state left even more committed to returning to their universities and communities and immersing themselves in both political and social activities.&amp;rdquo;&lt;br&gt;
+— Randy Weiler&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vision | Cleiver Ruiz-Martinez</title>
+    <link>http://localhost:1313/tags/vision/</link>
+      <atom:link href="http://localhost:1313/tags/vision/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vision</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_645fa481986063ef.png</url>
+      <title>Vision</title>
+      <link>http://localhost:1313/tags/vision/</link>
+    </image>
+    
+    <item>
+      <title>miniARM</title>
+      <link>http://localhost:1313/project/miniarm/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/miniarm/</guid>
+      <description>&lt;p&gt;A learning repository for programming the Hiwonder miniARM Robot using both Arduino IDE and PlatformIO with VSCode.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

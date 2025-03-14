@@ -35,6 +35,10 @@ To get started with the Hugo Academic CV Theme, follow the official guide [here]
     For help troubleshooting common Hugo errors, check out the [Troubleshooting guide](https://docs.hugoblox.com/reference/troubleshooting/).
 
 ## Useful Links
+- Icons you can download https://simpleicons.org/
+to add them use command "custom/[NAME OF FILE .svg]"
+https://icons.hugomods.com/docs/vendors/#material-design-icons
+
 
 -  👉 [**Get Started**](https://hugoblox.com/templates/)
 -  📚 [View the **documentation**](https://docs.hugoblox.com/)
@@ -44,6 +48,3 @@ To get started with the Hugo Academic CV Theme, follow the official guide [here]
 -  💡 [Suggest an improvement](https://github.com/HugoBlox/hugo-blox-builder/issues)
 -  ⬆️ **Updating?** View the [Update Guide](https://docs.hugoblox.com/reference/update/) and [Release Notes](https://github.com/HugoBlox/hugo-blox-builder/releases)
 ```
-
-Feel free to modify any section as needed! This structure provides a clear and concise guide for users interested in setting up the theme locally on macOS.
-

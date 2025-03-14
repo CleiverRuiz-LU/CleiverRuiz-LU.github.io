@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog | Cleiver Ruiz-Martinez</title>
+    <link>http://localhost:1313/post/</link>
+      <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Blog</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 12 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/media/icon_hu_645fa481986063ef.png</url>
+      <title>Blog</title>
+      <link>http://localhost:1313/post/</link>
+    </image>
+    
+    <item>
+      <title>RoboCup 2024</title>
+      <link>http://localhost:1313/post/robocup2024/</link>
+      <pubDate>Fri, 12 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/robocup2024/</guid>
+      <description>&lt;p&gt;📸 More Photos in &lt;a href=&#34;https://photos.google.com/share/AF1QipPSmfFeSJJbMU2WLBbBXzbHhqlMcnstHh4q7ZX6bPWX3S9jctF7mmxMBtcpnR7IyA?key=TDhNSV9PeEtPWk1PczRoM2hGb2lEMmJsUks1YmxR&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Photos Album&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;During the 2024 Summer Semester, I worked with Dr. Juan Rojas to develop robotic manipulation tasks for the Autonomous Robot Manipulation (ARM) Challenge, organized by RoboCup in collaboration with MathWorks and Universal Robots. This project helped me develop crucial skills in ROS, MATLAB, version control, and point cloud processing.&lt;/p&gt;
+&lt;p&gt;Our approach divided the workspace into progressively challenging sections:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% Initialize robot connection and configuration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;masterhostIP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UR5eROBOT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;initialRobotJConfig&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;optns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;StartRobotWorld&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&amp;#34;&lt;span class=&#34;n&#34;&gt;IP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ADDRESS&lt;/span&gt;&amp;#34;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &amp;#34;&lt;span class=&#34;n&#34;&gt;UR5e&lt;/span&gt;&amp;#34;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% Gray Zone (Easiest)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;staticPickAndPlace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;optns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% Yellow Zone (Medium Difficulty)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PickandPlaceARMChallenge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Zone3&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;optns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% Red Zone (Hard)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PickandPlaceARMChallenge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Zone4&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;optns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;% Blue Zone (Most Challenging)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;PickandPlaceARMChallenge&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Zone5&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;optns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/zXMk0hsVzh0?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;The most memorable achievement was developing our point cloud processing system. We successfully captured accurate 3D environment data, created reliable pick-and-place routines, and enabled the robot to reach target objects consistently. This system allowed our robot to complete its tasks within the environment, showcasing the effectiveness of our basic approach.&lt;/p&gt;
+&lt;p&gt;Though I couldn&amp;rsquo;t attend in person, my team had a remarkable performance at the Netherlands finals. We placed 3rd overall with a score of 760 out of 780 points, just 20 points behind the 2nd place team. During the competition, we overcame critical hardware and connection issues during setup, ensuring our robot was operational.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Photo of Entrance&#34; srcset=&#34;
+               /media/RoboCup2024-Image2_hu_85988b987b0f37fd.webp 400w,
+               /media/RoboCup2024-Image2_hu_e5d0b97d0aa4c110.webp 760w,
+               /media/RoboCup2024-Image2_hu_a8535685d6260f3a.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/RoboCup2024-Image2_hu_85988b987b0f37fd.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;342&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Through this competition, I learned that ROS configuration requires meticulous attention to detail to ensure seamless robot operations. MATLAB&amp;rsquo;s robotics toolbox significantly accelerated our development process by providing robust tools for simulation and control. Implementing version control was crucial in preventing catastrophic errors, allowing us to manage changes effectively and collaborate efficiently. Moreover, real-world testing exposed limitations in our simulations, highlighting the importance of bridging the gap between theoretical models and practical applications.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mission Trip to Honduras</title>
+      <link>http://localhost:1313/post/missiontrip/</link>
+      <pubDate>Sat, 06 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/missiontrip/</guid>
+      <description>&lt;p&gt;📸 More Photos in &lt;a href=&#34;https://photos.google.com/share/AF1QipP5ZsAg6rJFWa4btT6_Ez3SvMd9Gl11ysh1MHhFS2IAWTIKwlubvJ1jzQ60DxNONw?pli=1&amp;amp;key=NGhQSzJDdkN4b0xSWGJnUDcwQmdoVnpZUVIxemJ3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Photos Album&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I want to express my heartfelt gratitude to everyone who supported me during my recent mission trip. Thank you to everyone who reposted, shared, and donated. It was an incredible experience for which I am immensely grateful.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Campaign Flyer&#34; srcset=&#34;
+               /media/MissionTrip2024-Campaign_hu_fb4d328c957a80f.webp 400w,
+               /media/MissionTrip2024-Campaign_hu_f7337f214f5cbb93.webp 760w,
+               /media/MissionTrip2024-Campaign_hu_c88dbd57e29a9df4.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/MissionTrip2024-Campaign_hu_fb4d328c957a80f.webp&#34;
+               width=&#34;587&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Through advanced parole, I had the opportunity to join the Honduras Outreach International (HOI) mission, where I helped install solar panels at a local elementary school, provided educational resources, and translated between the staff and my team in order to effectively troubleshoot any problems.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Installing solar Panels&#34; srcset=&#34;
+               /media/MissionTrip2024_image3_hu_dc89ff501ef9b480.webp 400w,
+               /media/MissionTrip2024_image3_hu_354cb15737e0266a.webp 760w,
+               /media/MissionTrip2024_image3_hu_22605a4409b80da2.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/MissionTrip2024_image3_hu_dc89ff501ef9b480.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;507&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;The experience was profound on multiple levels. Not only did it provide me with the chance to educate the next generation of leaders, but it also marked my first time outside the borders of the United States. For so long, I was not allowed to leave the USA because of my undocumented status, but with the support of my community and organizations like TIRRC and JFON, I was able to apply for advanced parole. I am grateful that my first time outside the United States was spent providing a service related to my career, alongside my professors and school.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;image of studnts&#34; srcset=&#34;
+               /media/MissionTrip2024_image2_hu_2f2ff3ff98da6b62.webp 400w,
+               /media/MissionTrip2024_image2_hu_37d1e1058c77486.webp 760w,
+               /media/MissionTrip2024_image2_hu_39156b731f275bf7.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/MissionTrip2024_image2_hu_2f2ff3ff98da6b62.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;507&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;I will always remember the experience—the feeling of being the first person in my family to leave the USA and being allowed to come back was something that I understand is only afforded to a few. The support I received from my professors during this process also helped me create stronger bonds. I know that leaving and entering the USA was definitely a scary process, and having teachers who understood the situation, were willing to work with my fears, and supported me throughout the journey was very helpful.&lt;/p&gt;
+&lt;p&gt;I was also supported by the school through Lipscomb UCC services, where I was connected with counselors and therapists who helped me understand where my fears stemmed from. I know this process was scary and new, but it has helped me move forward toward obtaining my green card, for which I am eternally grateful. I now have a lawful entry into the USA and can proceed with becoming a permanent resident.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Group Photo&#34; srcset=&#34;
+               /media/MissionTrip2024_image1_hu_457b82991354c491.webp 400w,
+               /media/MissionTrip2024_image1_hu_ec49ded0d1185138.webp 760w,
+               /media/MissionTrip2024_image1_hu_eebccdce9dfc4197.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/MissionTrip2024_image1_hu_457b82991354c491.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;507&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tennessee Campus Civic Summit 2024</title>
+      <link>http://localhost:1313/post/tcdn/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/tcdn/</guid>
+      <description>&lt;p&gt;I was invited to share my experiences with TIRRC VOTES over the 2023 Summer Break. It was my first instance of being able to talk in a public setting where my experiences in engaging with my community made me a leader. As an undocumented student, civic engagement through door knocking, connecting with organizations, and building a network of resources helps us support our families and future generations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Group photo of summit participants&#34; srcset=&#34;
+               /media/TCDN_2024_image4_hu_89a98f0e23b3d6f.webp 400w,
+               /media/TCDN_2024_image4_hu_fac661860958ecf1.webp 760w,
+               /media/TCDN_2024_image4_hu_6653e3fc05536be.webp 1200w&#34;
+               src=&#34;http://localhost:1313/media/TCDN_2024_image4_hu_89a98f0e23b3d6f.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;507&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;At the conclusion of the Tennessee Campus Civic Summit, dozens of college students from across the state left even more committed to returning to their universities and communities and immersing themselves in both political and social activities.&amp;rdquo;&lt;br&gt;
+— Randy Weiler&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
